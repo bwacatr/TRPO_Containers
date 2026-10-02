@@ -1,0 +1,124 @@
+﻿<Window x:Class="Containers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Containers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        >
+    <Grid Background="WhiteSmoke">
+
+        <DockPanel LastChildFill="False">
+            <TextBlock DockPanel.Dock="Top" FontSize="18" Background="SaddleBrown" Foreground="White" Text="Заказ блюда с самовывозом" Padding="10"/>
+            <TextBlock DockPanel.Dock="Bottom" FontSize="12" Background="LightGray" Foreground="LightSlateGray" Text="Заказ № 128 Готовность: 18:30" Padding="5"/>
+            <Grid Margin="10,10,10,10" DockPanel.Dock="Top" Background="White" Width="auto" Height="auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    
+                    
+                </Grid.RowDefinitions>
+
+                <!--Первый столбик-->
+                <Label Content="Состав заказа" FontSize="14" FontWeight="Bold"/>
+
+                <Label Content="Блюдо" FontSize="12" Grid.Row="1"/>
+                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="1"  Width="250" Height="20">
+                    <ComboBoxItem Content="Паста с грибами"/>
+                    <ComboBoxItem Content="Борщ"/>
+                    <ComboBoxItem Content="Блины"/>
+                </ComboBox>
+
+                <Label Content="Размер порции" FontSize="12" Grid.Row="2"/>
+                <ComboBox SelectedIndex="0"  HorizontalAlignment="Right" FontSize="12" Grid.Row="2"  Width="250" Height="20">
+                    <ComboBoxItem Content="Маленькая"/>
+                    <ComboBoxItem Content="Средняя"/>
+                    <ComboBoxItem Content="Большая"/>
+                </ComboBox>
+
+                <Label Content="Количество" FontSize="12" Grid.Row="3"/>
+                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="3"  Width="250" Height="20">
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                    <ComboBoxItem Content="3"/>
+                </ComboBox>
+
+                <Label Content="Напиток" FontSize="12" Grid.Row="4"/>
+                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="4"  Width="250" Height="20">
+                    <ComboBoxItem Content="Вода"/>
+                    <ComboBoxItem Content="Чай"/>
+                    <ComboBoxItem Content="Кофе"/>
+                </ComboBox>
+
+                <StackPanel Orientation="Vertical" Grid.Row="5">
+                    <Label Content="Комментарий к приготовлению" FontSize="12" Grid.Row="5"/>
+                    <TextBox Width="auto" FontSize="12" Height="60"/>
+                </StackPanel>
+                
+                <WrapPanel Orientation="Vertical" Grid.Row="6">
+                    <Label Content="Добавки" FontSize="14" FontWeight="Bold"/>
+                    <WrapPanel >
+                        <CheckBox Margin="0,0,5,0"  Content="Сыр"/>
+                        <CheckBox Margin="0,0,5,0" Content="Грибы"/>
+                        <CheckBox Margin="0,0,5,0" Content="Томаты"/>
+                        <CheckBox Margin="0,0,5,0" Content="Зелень"/>
+                        <CheckBox Margin="0,0,5,0" Content="Острый соус"/>
+                        <CheckBox Margin="0,0,5,0" Content="Чесночный соус"/>
+                    </WrapPanel>
+                </WrapPanel>
+               
+
+
+
+                <!--Второй столбик-->
+                <Label Content="Контактные данные" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+
+                <Label Grid.Column="1" Content="Имя клиента" FontSize="12" Grid.Row="1"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="1"  Width="250" Height="20" />
+
+
+                <Label Grid.Column="1" Content="Телефон" FontSize="12" Grid.Row="2"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="2"  Width="250" Height="20" />
+
+                <Label Grid.Column="1" Content="Время получения" FontSize="12" Grid.Row="3"/>
+                <ComboBox Grid.Column="1" SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="3"  Width="250" Height="20">
+                    <ComboBoxItem Content="18:30"/>
+                    <ComboBoxItem Content="19:30"/>
+                    <ComboBoxItem Content="20:30"/>
+                </ComboBox>
+
+                <Label Grid.Column="1" Content="Способ оплаты" FontSize="12" Grid.Row="4"/>
+                <ComboBox SelectedIndex="0" Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="4"  Width="250" Height="20">
+                    <ComboBoxItem Content="Банковская карта"/>
+                    <ComboBoxItem Content="Наличные"/>
+                    <ComboBoxItem Content="СБП"/>
+                </ComboBox>
+
+                <StackPanel Grid.RowSpan="2" Grid.Row="5" Grid.Column="1">
+                    <Label Content="Блюда: 650 ₽"/>
+                    <Label Content="Напитки: 150 ₽"/>
+                    <Label Content="Итого: 800 ₽"/>
+
+                    <CheckBox Margin="0,10,0,0" Content="Нужны столовые приборы"/>
+                    <Button Margin="0,5,0,0" Content="Оформить"/>
+                    <Button Margin="0,5,0,0" Content="Отмена"/>
+                </StackPanel>
+            </Grid>
+
+            
+            
+        </DockPanel>
+
+    </Grid>
+</Window>
