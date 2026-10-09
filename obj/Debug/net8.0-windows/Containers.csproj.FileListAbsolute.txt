@@ -18,3 +18,4 @@ C:\Users\st310-08\Desktop\Romanov_PR31\Containers\obj\Debug\net8.0-windows\refin
 C:\Users\st310-08\Desktop\Romanov_PR31\Containers\obj\Debug\net8.0-windows\Containers.pdb
 C:\Users\st310-08\Desktop\Romanov_PR31\Containers\obj\Debug\net8.0-windows\Containers.genruntimeconfig.cache
 C:\Users\st310-08\Desktop\Romanov_PR31\Containers\obj\Debug\net8.0-windows\ref\Containers.dll
+C:\Users\st310-08\Desktop\Romanov_PR31\Containers\obj\Debug\net8.0-windows\Containers.sourcelink.json

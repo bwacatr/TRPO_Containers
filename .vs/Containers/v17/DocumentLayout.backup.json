@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E05BB934-C650-4519-A884-9FCC5486709B}|Containers.csproj|c:\\users\\st310-08\\desktop\\romanov_pr31\\containers\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E05BB934-C650-4519-A884-9FCC5486709B}|Containers.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E05BB934-C650-4519-A884-9FCC5486709B}|Containers.csproj|c:\\users\\st310-08\\desktop\\romanov_pr31\\containers\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E05BB934-C650-4519-A884-9FCC5486709B}|Containers.csproj|solutionrelative:mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +46,7 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T10:31:52.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-02T10:31:52.028Z"
             },
             {
               "$type": "Document",
@@ -63,42 +58,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-02T09:17:41.148Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "5c4435d9-4f42-4237-b20e-c8c258b49a4d",
-        "Display": 0,
-        "X": 979,
-        "Y": 207,
-        "Width": 800,
-        "Height": 600,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\st310-08\\Desktop\\Romanov_PR31\\Containers\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\st310-08\\Desktop\\Romanov_PR31\\Containers\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-02T09:29:03.941Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-02T09:17:41.148Z"
             }
           ]
         }
