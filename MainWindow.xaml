@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Containers"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="Заказ блюда на вывоз" Height="450" Width="800"
+        MinHeight="350"
+        MinWidth="400"
+        
         >
     <Grid Background="WhiteSmoke">
 
         <DockPanel LastChildFill="True"> 
             <!--DockPanel позволяет поместить TextBlock'и в нижнем и верхнем краях окна, а сам Grid по-середине, заполняя все оставшееся место собой-->
-            <TextBlock DockPanel.Dock="Top" FontSize="18" Background="SaddleBrown" Foreground="White" Text="Заказ блюда с самовывозом" Padding="10"/>
+            <TextBlock DockPanel.Dock="Bottom" FontSize="18" Background="SaddleBrown" Foreground="White" Text="Заказ блюда с самовывозом" Padding="10"/>
             <TextBlock DockPanel.Dock="Bottom" FontSize="12" Background="LightGray" Foreground="LightSlateGray" Text="Заказ № 128 Готовность: 18:30" Padding="5"/>
             <Grid Margin="10,10,10,10" DockPanel.Dock="Top" Background="White" Width="auto" Height="auto">
                 <!--Grid нужен для того, чтобы разместить каждый элемент в свои столбик и колонку, тем самым создавая порядок-->
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
@@ -33,42 +38,53 @@
                 </Grid.RowDefinitions>
 
                 <!--Первый столбик-->
-                <Label Content="Состав заказа" FontSize="14" FontWeight="Bold"/>
+                <Label Content="Состав заказа" FontSize="14" FontWeight="Bold" />
 
                 <Label Content="Блюдо" FontSize="12" Grid.Row="1"/>
-                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="1"  Width="250" Height="20">
-                    <ComboBoxItem Content="Паста с грибами"/>
-                    <ComboBoxItem Content="Борщ"/>
-                    <ComboBoxItem Content="Блины"/>
-                </ComboBox>
+
+                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+                    <ComboBox SelectedIndex="0"  FontSize="12" Grid.Row="1" Grid.Column="1"  Width="auto" Height="20">
+                        <ComboBoxItem Content="Паста с грибами"/>
+                        <ComboBoxItem Content="Борщ"/>
+                        <ComboBoxItem Content="Блины"/>
+                    </ComboBox>
+                </StackPanel>
 
                 <Label Content="Размер порции" FontSize="12" Grid.Row="2"/>
-                <ComboBox SelectedIndex="0"  HorizontalAlignment="Right" FontSize="12" Grid.Row="2"  Width="250" Height="20">
-                    <ComboBoxItem Content="Маленькая"/>
-                    <ComboBoxItem Content="Средняя"/>
-                    <ComboBoxItem Content="Большая"/>
-                </ComboBox>
+
+                <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Vertical">
+                    <ComboBox Grid.Column="1" SelectedIndex="0"   FontSize="12" Grid.Row="2"  Width="auto" Height="20">
+                        <ComboBoxItem Content="Маленькая"/>
+                        <ComboBoxItem Content="Средняя"/>
+                        <ComboBoxItem Content="Большая"/>
+                    </ComboBox>
+                </StackPanel>
 
                 <Label Content="Количество" FontSize="12" Grid.Row="3"/>
-                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="3"  Width="250" Height="20">
-                    <ComboBoxItem Content="1"/>
-                    <ComboBoxItem Content="2"/>
-                    <ComboBoxItem Content="3"/>
-                </ComboBox>
+
+                <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Vertical">
+                    <ComboBox Grid.Column="1" SelectedIndex="0" FontSize="12" Grid.Row="3"  Width="auto" Height="20">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                    </ComboBox>
+                </StackPanel>
 
                 <Label Content="Напиток" FontSize="12" Grid.Row="4"/>
-                <ComboBox SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="4"  Width="250" Height="20">
-                    <ComboBoxItem Content="Вода"/>
-                    <ComboBoxItem Content="Чай"/>
-                    <ComboBoxItem Content="Кофе"/>
-                </ComboBox>
+                <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Vertical">
+                    <ComboBox Grid.Column="1" SelectedIndex="0"  FontSize="12" Grid.Row="4"  Width="auto" Height="20">
+                        <ComboBoxItem Content="Вода"/>
+                        <ComboBoxItem Content="Чай"/>
+                        <ComboBoxItem Content="Кофе"/>
+                    </ComboBox>
+                </StackPanel>
 
-                <StackPanel Orientation="Vertical" Grid.Row="5">
+                <StackPanel Grid.ColumnSpan="2" Orientation="Vertical" Grid.Row="5">
                     <!--Здесь использован StackPanel, чтобы растянуть TextBox до конца его клетки-->
                     <Label Content="Комментарий к приготовлению" FontSize="12" Grid.Row="5"/>
                     <TextBox Width="auto" FontSize="12" Height="60"/>
                 </StackPanel>
-                <WrapPanel Orientation="Vertical" Grid.Row="6">
+                <WrapPanel Grid.ColumnSpan="2" Orientation="Vertical" Grid.Row="6">
                     <!--Две wrappanel нужны, чтобы "Добавки" и вторая WrapPanel друг под другом, когда содержимое второй WrapPanel находится в горизонтальном положении. Они будут переходить на следующую строку при нехватке места.-->
                     <Label Content="Добавки" FontSize="14" FontWeight="Bold"/>
                     <WrapPanel >    
@@ -85,30 +101,40 @@
 
 
                 <!--Второй столбик-->
-                <Label Content="Контактные данные" FontSize="14" FontWeight="Bold" Grid.Column="1"/>
+                <Label Content="Контактные данные" FontSize="14" FontWeight="Bold" Grid.Column="2"/>
 
-                <Label Grid.Column="1" Content="Имя клиента" FontSize="12" Grid.Row="1"/>
-                <TextBox Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="1"  Width="250" Height="20" />
+                <Label Grid.Column="2" Content="Имя клиента" FontSize="12" Grid.Row="1"/>
+                <StackPanel Grid.Column="3" Grid.Row="1" Orientation="Vertical">
+                    <TextBox   FontSize="12"   Width="auto" Height="20" VerticalAlignment="Center" />
+                </StackPanel>
 
+                <Label Grid.Column="2" Content="Телефон" FontSize="12" Grid.Row="2"/>
 
-                <Label Grid.Column="1" Content="Телефон" FontSize="12" Grid.Row="2"/>
-                <TextBox Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="2"  Width="250" Height="20" />
+                <StackPanel Grid.Column="3" Grid.Row="2" Orientation="Vertical">
+                    <TextBox   FontSize="12"  Width="auto" Height="20" />
+                </StackPanel>
+                
+                <Label Grid.Column="2" Content="Время получения" FontSize="12" Grid.Row="3"/>
 
-                <Label Grid.Column="1" Content="Время получения" FontSize="12" Grid.Row="3"/>
-                <ComboBox Grid.Column="1" SelectedIndex="0" HorizontalAlignment="Right" FontSize="12" Grid.Row="3"  Width="250" Height="20">
+                <StackPanel Grid.Column="3" Grid.Row="3" Orientation="Vertical">
+                    <ComboBox Grid.Column="3" SelectedIndex="0"  FontSize="12" Grid.Row="3"  Width="auto" Height="20">
                     <ComboBoxItem Content="18:30"/>
                     <ComboBoxItem Content="19:30"/>
                     <ComboBoxItem Content="20:30"/>
                 </ComboBox>
+                </StackPanel>
 
-                <Label Grid.Column="1" Content="Способ оплаты" FontSize="12" Grid.Row="4"/>
-                <ComboBox SelectedIndex="0" Grid.Column="1" HorizontalAlignment="Right" FontSize="12" Grid.Row="4"  Width="250" Height="20">
+                <Label Grid.Column="2" Content="Способ оплаты" FontSize="12" Grid.Row="4"/>
+                
+                <StackPanel Grid.Column="3" Grid.Row="4" Orientation="Vertical">
+                <ComboBox SelectedIndex="0" Grid.Column="3"  FontSize="12" Grid.Row="4"  Width="auto" Height="20">
                     <ComboBoxItem Content="Банковская карта"/>
                     <ComboBoxItem Content="Наличные"/>
                     <ComboBoxItem Content="СБП"/>
                 </ComboBox>
+                </StackPanel>
 
-                <StackPanel Grid.RowSpan="2" Grid.Row="5" Grid.Column="1">
+                <StackPanel Grid.RowSpan="2" Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="2">
                     <!--StackPanel позволяет организовать элементы друг под другом, заняв при этом пару строк, а также растянув кнопки на всю ширину их колонок -->
                     <Label Content="Блюда: 650 ₽"/>
                     <Label Content="Напитки: 150 ₽"/>
